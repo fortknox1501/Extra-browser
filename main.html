@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Browser</title>
+    <title>Extra Browser</title>
     <style>
         body {
             margin: 0;
@@ -30,17 +30,16 @@
 <body>
 
 <div id="bar">
-    <input type="text" id="url" placeholder="Enter URL (https://...)">
+    <input type="text" id="url" placeholder="Enter URL (example.com)">
     <button onclick="go()">Go</button>
 </div>
 
-<iframe id="frame" src=""></iframe>
+<iframe id="frame"></iframe>
 
 <script>
 function go() {
     let url = document.getElementById("url").value;
 
-    // Add https if missing
     if (!url.startsWith("http")) {
         url = "https://" + url;
     }
